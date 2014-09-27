@@ -99,6 +99,9 @@ ext {
             ],
             'spring.webmvc': [
                     "org.springframework:spring-webmvc:${springCoreVersion}"
+            ],
+            cxf            : [
+                    'org.apache.cxf:cxf-bundle:2.7.5'
             ]
     ]
 
