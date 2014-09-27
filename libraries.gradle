@@ -91,7 +91,14 @@ ext {
             'spring.base' : [
                     "org.springframework:spring-context:${springCoreVersion}",
                     "org.springframework:spring-core:${springCoreVersion}",
-                    "org.springframework:spring-beans:${springCoreVersion}"
+                    "org.springframework:spring-beans:${springCoreVersion}",
+                    "org.springframework:spring-expression:${springCoreVersion}"
+            ],
+            'spring.web':[
+                    "org.springframework:spring-web:${springCoreVersion}",
+            ],
+            'spring.webmvc':[
+                    "org.springframework:spring-webmvc:${springCoreVersion}",
             ]
     ]
 
