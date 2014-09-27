@@ -88,7 +88,7 @@ ext {
     ]
 
     libpacks = [
-            spring.base = [
+            'spring.base' : [
                     "org.springframework:spring-context:${springCoreVersion}",
                     "org.springframework:spring-core:${springCoreVersion}",
                     "org.springframework:spring-beans:${springCoreVersion}"
