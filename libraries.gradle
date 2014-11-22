@@ -1,107 +1,59 @@
 ext {
-    logbackVersion = '1.1.2'
-    slf4jVersion = '1.7.7'
-    commonLangVersion = '2.6'
-
-    csUtilitiesVersion = '1.0.4.2'
-
-    alfaWebServiceGeneratorVersion = '1.0.6'
-    alfaWebServiceDeployVersion = '1.1.4'
-    alfaWebServiceVersion = '1.2.1'
-
-    alfaCommonLoggingVersion = '1.0.1'
-    alfaCommonRestVersion = '1.0.0.2'
-
-    springCoreVersion = '4.0.6.RELEASE'
-
-    springDataJpaVersion = '1.6.1.RELEASE'
-    springDataRestWebmbcVersion = '2.1.2.RELEASE'
-    springSecurityWebVersion = '3.2.4.RELEASE'
-    springSecurityOauth2Version = '2.0.1.RELEASE'
-
-    hibernateJpa2ApiVersion = '1.0.1.Final'
-    hibernateEntityManagerVersion = '4.0.1.Final'
-
-    javaxCdiApiVersion = '1.0-SP4.redhat-3'
-
-    jbossJavaxAnnotationsApiVersion = '1.0.1.Final'
-
-    jbossJaxRSApiVersion = '1.0.1.Final'
-
-    resteasyJaxRSVersion = '2.3.0.GA'
-
     libraries = [
-            'logback-classic'                 : "ch.qos.logback:logback-classic:${logbackVersion}",
-            'logback-core'                    : "ch.qos.logback:logback-core:${logbackVersion}",
-            slf4j                             : "org.slf4j:slf4j-api:${slf4jVersion}",
-            'common-lang'                     : "commons-lang:commons-lang:$commonLangVersion",
-            'spring-context'                  : "org.springframework:spring-context:${springCoreVersion}",
-            'spring-core'                     : "org.springframework:spring-core:${springCoreVersion}",
-            'spring-beans'                    : "org.springframework:spring-beans:${springCoreVersion}",
-            'spring-expression'               : "org.springframework:spring-expression:${springCoreVersion}",
-            'spring-web'                      : "org.springframework:spring-web:${springCoreVersion}",
-            'spring-webmvc'                   : "org.springframework:spring-webmvc:${springCoreVersion}",
+            'logback-classic'                 : "ch.qos.logback:logback-classic",
+            'logback-core'                    : "ch.qos.logback:logback-core",
+            slf4j                             : "org.slf4j:slf4j-api",
+            'common-lang'                     : "commons-lang:commons-lang",
+            'spring-context'                  : "org.springframework:spring-context",
+            'spring-core'                     : "org.springframework:spring-core",
+            'spring-beans'                    : "org.springframework:spring-beans",
+            'spring-expression'               : "org.springframework:spring-expression",
+            'spring-web'                      : "org.springframework:spring-web",
+            'spring-webmvc'                   : "org.springframework:spring-webmvc",
 
-            'spring-data-jpa'                 : "org.springframework.data:spring-data-jpa:${springDataJpaVersion}",
-            'spring-data-rest-webmvc'         : "org.springframework.data:spring-data-rest-webmvc:${springDataRestWebmbcVersion}",
-            'spring-security-web'             : "org.springframework.security:spring-security-web:${springSecurityWebVersion}",
-            'spring-security-oauth2'          : "org.springframework.security.oauth:spring-security-oauth2:${springSecurityOauth2Version}",
+            'spring-data-jpa'                 : "org.springframework.data:spring-data-jpa",
+            'spring-data-rest-webmvc'         : "org.springframework.data:spring-data-rest-webmvc",
+            'spring-security-web'             : "org.springframework.security:spring-security-web",
+            'spring-security-oauth2'          : "org.springframework.security.oauth:spring-security-oauth2",
+            groovy                            : ['org.codehaus.groovy:groovy-all']
+
+            'spring-boot-web'                     : [
+                "org.springframework.boot:spring-boot-starter-web"
+                "org.springframework.boot:spring-boot-starter-actuator"
+            ]
 
             /**
              * Use only as provided dependency
              */
             'spring-all'                      : [
-                    "org.springframework:spring-context:${springCoreVersion}",
-                    "org.springframework:spring-core:${springCoreVersion}",
-                    "org.springframework:spring-beans:${springCoreVersion}",
-                    "org.springframework:spring-expression:${springCoreVersion}",
-                    "org.springframework:spring-web:${springCoreVersion}",
-                    "org.springframework:spring-webmvc:${springCoreVersion}",
-                    "org.springframework.data:spring-data-jpa:${springDataJpaVersion}",
-                    "org.springframework.data:spring-data-rest-webmvc:${springDataRestWebmbcVersion}",
-                    "org.springframework.security:spring-security-web:${springSecurityWebVersion}",
-                    "org.springframework.security.oauth:spring-security-oauth2:${springSecurityOauth2Version}"
-            ],
-
-            'hibernate-jpa2-api'              : "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:${hibernateJpa2ApiVersion}",
-            'hibernate-entity-manager'        : "org.hibernate:hibernate-entitymanager:${hibernateEntityManagerVersion}",
-
-            'hibernate-all'                   : [
-                    "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:${hibernateJpa2ApiVersion}",
-                    "org.hibernate:hibernate-entitymanager:${hibernateEntityManagerVersion}"
-            ],
-
-            'javax-cdi-api'                   : "javax.enterprise:cdi-api:${javaxCdiApiVersion}",
-            'jboss-annotations-api'           : "org.jboss.spec.javax.annotation:jboss-annotations-api_1.1_spec:${jbossJavaxAnnotationsApiVersion}",
-            'javaee6-api'                     : "javax:javaee-api:6.0",
-            'jboss-jaxrs-api'                 : "org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_1.1_spec:${jbossJaxRSApiVersion}",
-            'resteasy-jaxrs'                  : "org.jboss.resteasy:resteasy-jaxrs:${resteasyJaxRSVersion}",
-
-            'javaee-jboss-resteasy-and-others': [
-                    "javax.enterprise:cdi-api:${javaxCdiApiVersion}",
-                    "org.jboss.spec.javax.annotation:jboss-annotations-api_1.1_spec:${jbossJavaxAnnotationsApiVersion}",
-                    "javax:javaee-api:6.0",
-                    "org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_1.1_spec:${jbossJaxRSApiVersion}",
-                    "org.jboss.resteasy:resteasy-jaxrs:${resteasyJaxRSVersion}"
-            ]
-
+                    "org.springframework:spring-context",
+                    "org.springframework:spring-core",
+                    "org.springframework:spring-beans",
+                    "org.springframework:spring-expression",
+                    "org.springframework:spring-web",
+                    "org.springframework:spring-webmvc",
+                    "org.springframework.data:spring-data-jpa",
+                    "org.springframework.data:spring-data-rest-webmvc",
+                    "org.springframework.security:spring-security-web",
+                    "org.springframework.security.oauth:spring-security-oauth2"
+            ]        
     ]
 
     libpacks = [
             'spring.base'  : [
-                    "org.springframework:spring-context:${springCoreVersion}",
-                    "org.springframework:spring-core:${springCoreVersion}",
-                    "org.springframework:spring-beans:${springCoreVersion}",
-                    "org.springframework:spring-expression:${springCoreVersion}"
+                    "org.springframework:spring-context",
+                    "org.springframework:spring-core",
+                    "org.springframework:spring-beans",
+                    "org.springframework:spring-expression"
             ],
             'spring.web'   : [
-                    "org.springframework:spring-web:${springCoreVersion}"
+                    "org.springframework:spring-web"
             ],
             'spring.webmvc': [
-                    "org.springframework:spring-webmvc:${springCoreVersion}"
+                    "org.springframework:spring-webmvc"
             ],
             cxf            : [
-                    'org.apache.cxf:cxf-bundle:2.7.5'
+                    'org.apache.cxf:cxf-bundle'
             ]
     ]
 
