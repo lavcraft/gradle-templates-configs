@@ -17,7 +17,10 @@ ext {
             'spring-security-oauth2' : "org.springframework.security.oauth:spring-security-oauth2",
             groovy                   : ['org.codehaus.groovy:groovy-all'],
 
-            'spring-boot'            : 'org.springframework.boot:spring-boot:+',
+            'spring-boot'            : [
+                    'org.springframework.boot:spring-boot:+',
+                    'org.springframework.boot:spring-boot-autoconfigure:+'
+            ],
             'spring-boot-web'        : [
                     "org.springframework.boot:spring-boot-starter-web:+",
                     "org.springframework.boot:spring-boot-starter-actuator:+"
