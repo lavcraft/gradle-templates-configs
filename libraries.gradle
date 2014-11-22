@@ -1,31 +1,31 @@
 ext {
     libraries = [
-            'logback-classic'                 : "ch.qos.logback:logback-classic",
-            'logback-core'                    : "ch.qos.logback:logback-core",
-            slf4j                             : "org.slf4j:slf4j-api",
-            'common-lang'                     : "commons-lang:commons-lang",
-            'spring-context'                  : "org.springframework:spring-context",
-            'spring-core'                     : "org.springframework:spring-core",
-            'spring-beans'                    : "org.springframework:spring-beans",
-            'spring-expression'               : "org.springframework:spring-expression",
-            'spring-web'                      : "org.springframework:spring-web",
-            'spring-webmvc'                   : "org.springframework:spring-webmvc",
+            'logback-classic'        : "ch.qos.logback:logback-classic",
+            'logback-core'           : "ch.qos.logback:logback-core",
+            slf4j                    : "org.slf4j:slf4j-api",
+            'common-lang'            : "commons-lang:commons-lang",
+            'spring-context'         : "org.springframework:spring-context",
+            'spring-core'            : "org.springframework:spring-core",
+            'spring-beans'           : "org.springframework:spring-beans",
+            'spring-expression'      : "org.springframework:spring-expression",
+            'spring-web'             : "org.springframework:spring-web",
+            'spring-webmvc'          : "org.springframework:spring-webmvc",
 
-            'spring-data-jpa'                 : "org.springframework.data:spring-data-jpa",
-            'spring-data-rest-webmvc'         : "org.springframework.data:spring-data-rest-webmvc",
-            'spring-security-web'             : "org.springframework.security:spring-security-web",
-            'spring-security-oauth2'          : "org.springframework.security.oauth:spring-security-oauth2",
-            groovy                            : ['org.codehaus.groovy:groovy-all']
+            'spring-data-jpa'        : "org.springframework.data:spring-data-jpa",
+            'spring-data-rest-webmvc': "org.springframework.data:spring-data-rest-webmvc",
+            'spring-security-web'    : "org.springframework.security:spring-security-web",
+            'spring-security-oauth2' : "org.springframework.security.oauth:spring-security-oauth2",
+            groovy                   : ['org.codehaus.groovy:groovy-all'],
 
-            'spring-boot-web'                     : [
-                "org.springframework.boot:spring-boot-starter-web"
-                "org.springframework.boot:spring-boot-starter-actuator"
-            ]
+            'spring-boot-web'        : [
+                    "org.springframework.boot:spring-boot-starter-web",
+                    "org.springframework.boot:spring-boot-starter-actuator"
+            ],
 
             /**
              * Use only as provided dependency
              */
-            'spring-all'                      : [
+            'spring-all'             : [
                     "org.springframework:spring-context",
                     "org.springframework:spring-core",
                     "org.springframework:spring-beans",
@@ -36,7 +36,9 @@ ext {
                     "org.springframework.data:spring-data-rest-webmvc",
                     "org.springframework.security:spring-security-web",
                     "org.springframework.security.oauth:spring-security-oauth2"
-            ]        
+            ],
+
+            spock                    : 'org.spockframework:spock-core:0.7-groovy-2.0'
     ]
 
     libpacks = [
